@@ -32,6 +32,7 @@ class UserAPI:
             password = body.get('password')
             dob = body.get('dob')
             Nick = body.get('Nick')
+            role = body.get('role')
 
             ''' #1: Key code block, setup USER OBJECT '''
             uo = User(name=name, 
