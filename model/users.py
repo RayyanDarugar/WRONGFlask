@@ -80,18 +80,20 @@ class User(db.Model):
     _dob = db.Column(db.Date)
     _Nick = db.Column(db.String(255), unique=False, nullable=False)
     _role = db.Column(db.String(20), default="User", nullable=False)
+    _wins = db.Column(db.Integer, default="0", nullable=False)
     
     # Defines a relationship between User record and Notes table, one-to-many (one user to many notes)
     posts = db.relationship("Post", cascade='all, delete', backref='users', lazy=True)
 
     # constructor of a User object, initializes the instance variables within object (self)
-    def __init__(self, name, uid, password="123qwerty", dob=date.today(), Nick="", role="User"):
+    def __init__(self, name, uid, password="123qwerty", dob=date.today(), Nick="", role="User", wins="0"):
         self._name = name    # variables with self prefix become part of the object, 
         self._uid = uid
         self.set_password(password)
         self._dob = dob
         self._Nick = Nick
         self._role = role
+        self._wins = wins
 
 
     @property
@@ -170,6 +172,13 @@ class User(db.Model):
     def Nick(self, Nick):
         self._Nick = Nick
     
+    @property
+    def wins(self):
+        return self._wins
+        
+    @wins.setter
+    def wins(self, wins):
+        self.wins = wins
     # output content using str(object) in human readable form, uses getter
     # output content using json dumps, this is ready for API response
     def __str__(self):
@@ -198,12 +207,13 @@ class User(db.Model):
             "age": self.age,
             "Nick": self.Nick,
             "role": self.role,
+            "wins": self.wins,
             "posts": [post.read() for post in self.posts]
         }
 
     # CRUD update: updates user name, password, phone
     # returns self
-    def update(self, name="", uid="", password="", Nick="", role=""):
+    def update(self, name="", uid="", password="", Nick="", role="", wins=""):
         """only updates values with length"""
         if len(name) > 0:
             self.name = name
@@ -215,6 +225,8 @@ class User(db.Model):
             self.Nick = Nick
         if len(role) > 0:
             self.role = role
+        if len(wins) > 0:
+            self.wins = wins
         db.session.commit()
         return self
 
@@ -239,7 +251,7 @@ def initUsers():
         u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10), Nick='Nikky')
         u3 = User(name='Alexander Graham Bell', uid='lex')
         u4 = User(name='Grace Hopper', uid='hop', password='123hop', dob=date(1906, 12, 9), Nick='Gracy')
-        u5 = User(name='Grayson Guyot', uid='Gray', password='123Gray', dob=date(2008, 6, 2), Nick='Gray', role="Admin")
+        u5 = User(name='Grayson Guyot', uid='Gray', password='123Gray', dob=date(2008, 6, 2), Nick='Gray', role="Admin", wins='0')
         users = [u1, u2, u3, u4, u5]
 
         """Builds sample user/note(s) data"""

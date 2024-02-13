@@ -33,6 +33,7 @@ class UserAPI:
             dob = body.get('dob')
             Nick = body.get('Nick')
             role = body.get('role')
+            wins = body.get('wins')
 
             ''' #1: Key code block, setup USER OBJECT '''
             uo = User(name=name, 
