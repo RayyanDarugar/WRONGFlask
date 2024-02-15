@@ -61,6 +61,20 @@ class CurrentCharAPI:
             CurrentCharacter = CurrentChar.query.all()    # read/extract all users from database
             json_ready = [CurrentCharacter.read() for CurrentCharacter in CurrentCharacter]  # prepare output in json
             return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
+
+        def put(self):
+            body = request.get_json() # get the body of the request
+            classname = body.get('classname')
+            health = body.get('health') # get the UID (Know what to reference)
+            attack = body.get('attack') # get name (to change)
+            range = body.get('range') # get name (to change)
+            movement = body.get('movement') # get name (to change)
+            CurrentCharacter = CurrentChar.query.all() # get users
+            # for CurrentCharacter in CurrentCharacter:
+                # if CurrentCharacter.classname == classname: # find user with matching uid
+            # check length of current character todo
+            CurrentCharacter[0].update(classname,health,attack,range,movement) # update info
+            return f"{CurrentCharacter.read()} Updated"
     
     # class _Security(Resource):
     #     def post(self):

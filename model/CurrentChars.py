@@ -175,19 +175,24 @@ class CurrentChar(db.Model):
             "movement": self.movement,
             # "posts": [post.read() for post in self.posts]
         }
+        
 
-    # # CRUD update: updates user name, password, phone
-    # # returns self
-    # def update(self, name="", uid="", password=""):
-    #     """only updates values with length"""
-    #     if len(name) > 0:
-    #         self.name = name
-    #     if len(uid) > 0:
-    #         self.uid = uid
-    #     if len(password) > 0:
-    #         self.set_password(password)
-    #     db.session.commit()
-    #     return self
+    # CRUD update: updates user name, password, phone
+    # returns self
+    def update(self, classname="", health=None, attack=None, range=None, movement=None):
+        """only updates values with length"""
+        if len(classname) > 0:
+            self.classname = classname
+        if len(health) > 0:
+            self.health = health
+        if len(attack) > 0:
+            self.attack = attack
+        if len(range) > 0:
+            self.range = range
+        if len(movement) > 0:
+            self.movement = movement
+        db.session.commit()
+        return self
 
     # CRUD delete: remove self
     # None
