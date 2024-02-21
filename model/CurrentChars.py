@@ -171,7 +171,7 @@ class CurrentChar(db.Model):
             "classname": self.classname,
             "health": self.health,
             "attack": self.attack,
-            "range": self.range,
+            "range": self._range,
             "movement": self.movement,
             # "posts": [post.read() for post in self.posts]
         }
@@ -183,13 +183,9 @@ class CurrentChar(db.Model):
         """only updates values with length"""
         if len(classname) > 0:
             self.classname = classname
-        if len(health) > 0:
             self.health = health
-        if len(attack) > 0:
             self.attack = attack
-        if len(range) > 0:
-            self.range = range
-        if len(movement) > 0:
+            self._range = range
             self.movement = movement
         db.session.commit()
         return self
@@ -211,7 +207,7 @@ def initCurrentChars():
         """Create database and tables"""
         db.create_all()
         """Tester data for table"""
-        u1 = CurrentChar(classname='', health=None, attack=None, range=False, movement=False )
+        u1 = CurrentChar(classname='', health=None, attack=None, range=None, movement=None)
 
         CurrentCharacter = [u1]
 

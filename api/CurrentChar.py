@@ -15,46 +15,41 @@ api = Api(currentchar_api)
 class CurrentCharAPI:        
     class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implemeented
         # @token_required
-        # def post(self, current_user): # Create method
-        #     ''' Read data for json body '''
-        #     body = request.get_json()
+        def post(self): # Create method
+            ''' Read data for json body '''
+            body = request.get_json()
             
-        #     ''' Avoid garbage in, error checking '''
-        #     # validate name
-        #     classname = body.get('classname')
-        #     if classname is None or len(classname) < 2:
-        #         return {'message': f'Name is missing, or is less than 2 characters'}, 400
-        #     # validate uid
-        #     uid = body.get('uid')
-        #     if uid is None or len(uid) < 2:
-        #         return {'message': f'User ID is missing, or is less than 2 characters'}, 400
-        #     # look for password and dob
-        #     password = body.get('password')
-        #     dob = body.get('dob')
+            ''' Avoid garbage in, error checking '''
+            # validate name
+            classname = body.get('classname')
+            if classname is None or len(classname) < 2:
+                return {'message': f'Name is missing, or is less than 2 characters'}, 400
+            health = body.get('health')
+            # if health is None or len(health) < 2:
+            #     return {'message': f'Name is missing, or is less than 2 characters'}, 400
+            attack = body.get('attack')
+            # if attack is None or len(attack) < 2:
+            #     return {'message': f'Name is missing, or is less than 2 characters'}, 400
+            range = body.get('range')
+            # if range is None or len(range) < 2:
+            #     return {'message': f'Name is missing, or is less than 2 characters'}, 400
+            movement = body.get('movement')
+            # if movement is None or len(movement) < 2:
+            #     return {'message': f'Name is missing, or is less than 2 characters'}, 400
 
-        #     ''' #1: Key code block, setup USER OBJECT '''
-        #     co = CharClass(classname=classname)
+            ''' #1: Key code block, setup USER OBJECT '''
+            co = CurrentChar(classname=classname,
+                             health=health,
+                             attack=attack,
+                             range=str(range).lower()=="true",
+                             movement=str(movement).lower()=="true")
         
-            
-        #     ''' Additional garbage error checking '''
-        #     # set password if provided
-        #     if password is not None:
-        #         co.set_password(password)
-        #     # convert to date type
-        #     if dob is not None:
-        #         try:
-        #             co.dob = datetime.strptime(dob, '%Y-%m-%d').date()
-        #         except:
-        #             return {'message': f'Date of birth format error {dob}, must be mm-dd-yyyy'}, 400
-            
-        #     ''' #2: Key Code block to add user to database '''
-        #     # create user in database
-        #     CharClass = co.create()
-        #     # success returns json of user
-        #     if CharClass:
-        #         return jsonify(CharClass.read())
-        #     # failure returns error
-        #     return {'message': f'Processed {classname}, either a format error or User ID {uid} is duplicate'}, 400
+            ''' #2: Key Code block to add user to database '''
+            # create user in database
+            CharClass = co.create()
+            # success returns json of user
+            if CharClass:
+                return jsonify(CharClass.read())
 
         # @token_required
         def get(self): # Read Method
@@ -73,8 +68,8 @@ class CurrentCharAPI:
             # for CurrentCharacter in CurrentCharacter:
                 # if CurrentCharacter.classname == classname: # find user with matching uid
             # check length of current character todo
-            CurrentCharacter[0].update(classname,health,attack,range,movement) # update info
-            return f"{CurrentCharacter.read()} Updated"
+            CurrentCharacter[0].update(classname,health,attack,range==True,movement==True) # update info
+            return f"{CurrentCharacter[0].read()} Updated"
     
     # class _Security(Resource):
     #     def post(self):
