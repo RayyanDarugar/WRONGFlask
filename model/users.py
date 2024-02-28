@@ -86,7 +86,7 @@ class User(db.Model):
     posts = db.relationship("Post", cascade='all, delete', backref='users', lazy=True)
 
     # constructor of a User object, initializes the instance variables within object (self)
-    def __init__(self, name, uid, password="123qwerty", dob=date.today(), Nick="", role="User", wins="0"):
+    def __init__(self, name, uid, wins, password="123qwerty", dob=date.today(), Nick="", role="User"):
         self._name = name    # variables with self prefix become part of the object, 
         self._uid = uid
         self.set_password(password)
@@ -94,7 +94,6 @@ class User(db.Model):
         self._Nick = Nick
         self._role = role
         self._wins = wins
-
 
     @property
     def role(self):
@@ -178,7 +177,7 @@ class User(db.Model):
         
     @wins.setter
     def wins(self, wins):
-        self.wins = wins
+        self._wins = wins
     # output content using str(object) in human readable form, uses getter
     # output content using json dumps, this is ready for API response
     def __str__(self):
@@ -247,11 +246,11 @@ def initUsers():
         """Create database and tables"""
         db.create_all()
         """Tester data for table"""
-        u1 = User(name='Thomas Edison', uid='toby', password='123toby', dob=date(1847, 2, 11), Nick='Tom')
-        u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10), Nick='Nikky')
-        u3 = User(name='Alexander Graham Bell', uid='lex')
-        u4 = User(name='Grace Hopper', uid='hop', password='123hop', dob=date(1906, 12, 9), Nick='Gracy')
-        u5 = User(name='Grayson Guyot', uid='Gray', password='123Gray', dob=date(2008, 6, 2), Nick='Gray', role="Admin", wins='0')
+        u1 = User(name='Thomasasdfghjkl Edison', uid='toby', password='123toby', dob=date(1847, 2, 11), Nick='Tom', wins=0)
+        u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10), Nick='Nikky', wins=0)
+        u3 = User(name='Alexander Graham Bell', uid='lex', wins=0)
+        u4 = User(name='Grace Hopper', uid='hop', password='123hop', dob=date(1906, 12, 9), Nick='Gracy', wins=0)
+        u5 = User(name='Grayson Guyot', uid='Gray', password='123Gray', dob=date(2008, 6, 2), Nick='Gray', role="Admin", wins=0)
         users = [u1, u2, u3, u4, u5]
 
         """Builds sample user/note(s) data"""
