@@ -246,10 +246,10 @@ def initUsers():
         """Create database and tables"""
         db.create_all()
         """Tester data for table"""
-        u1 = User(name='Thomasasdfghjkl Edison', uid='toby', password='123toby', dob=date(1847, 2, 11), Nick='Tom', wins=0)
-        u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10), Nick='Nikky', wins=0)
-        u3 = User(name='Alexander Graham Bell', uid='lex', wins=0)
-        u4 = User(name='Grace Hopper', uid='hop', password='123hop', dob=date(1906, 12, 9), Nick='Gracy', wins=0)
+        u1 = User(name='Thomasasdfghjkl Edison', uid='toby', password='123toby', dob=date(1847, 2, 11), Nick='Tom', wins=1)
+        u2 = User(name='Nicholas Tesla', uid='niko', password='123niko', dob=date(1856, 7, 10), Nick='Nikky', wins=89)
+        u3 = User(name='The_goat', uid='goat', wins=1)
+        u4 = User(name='Nate-the-great', uid='nate', password='123nate', dob=date(2007, 10, 19), Nick='Gracy', wins=5)
         u5 = User(name='Grayson Guyot', uid='Gray', password='123Gray', dob=date(2008, 6, 2), Nick='Gray', role="Admin", wins=0)
         users = [u1, u2, u3, u4, u5]
 
