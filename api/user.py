@@ -13,7 +13,7 @@ user_api = Blueprint('user_api', __name__,
 api = Api(user_api)
 
 class UserAPI:        
-    class _CRUD(Resource):  # User API operation for Create, Read.  THe Update, Delete methods need to be implemeented
+    class _CRUD(Resource):  # User API operation for Create, Read.  The Update, Delete methods need to be implemented
         @token_required
         def post(self, current_user): # Create method
             ''' Read data for json body '''
@@ -64,6 +64,7 @@ class UserAPI:
         @token_required
         def get(self, current_user): # Read Method
             users = User.query.all()    # read/extract all users from database
+            print("dis be what we fetchin boys...", users[3].__dict__)
             json_ready = [user.read() for user in users]  # prepare output in json
             return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
     
