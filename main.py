@@ -17,11 +17,14 @@ from api.player import player_api
 from api.CharClass import classes_api
 from api.CurrentChar import currentchar_api
 from api.titanic import titanic_api
+from api.tbftML import tbftmodel_api
+
 # database migrations
 from model.users import initUsers
 from model.classes import initCharClasses
 from model.players import initPlayers
 from model.CurrentChars import initCurrentChars
+from model.tbftMLs import initTBFTModel
 
 # setup App pages
 from projects.projects import app_projects # Blueprint directory import projects definition
@@ -38,6 +41,7 @@ app.register_blueprint(classes_api)
 app.register_blueprint(currentchar_api)
 app.register_blueprint(player_api)
 app.register_blueprint(titanic_api)
+app.register_blueprint(tbftmodel_api)
 app.register_blueprint(app_projects) # register app pages
 
 @app.errorhandler(404)  # catch for URL not found
@@ -70,6 +74,7 @@ def generate_data():
     initPlayers()
     initCharClasses()
     initCurrentChars()
+    initTBFTModel()
 
 # Register the custom command group with the Flask application
 app.cli.add_command(custom_cli)
