@@ -1,0 +1,469 @@
+[{
+    "name": "AI-9000",
+    "age": 10,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9001",
+    "age": 16,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 6,
+    "winorloss": 0
+},
+{
+    "name": "AI-9002",
+    "age": 20,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9003",
+    "age": 8,
+    "sex": "female",
+    "dominanthand": "left",
+    "firstmove": 3,
+    "firstattack": 5,
+    "winorloss": 0
+},
+{
+    "name": "AI-9004",
+    "age": 31,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9005",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9006",
+    "age": 23,
+    "sex": "male",
+    "dominanthand": "rigiht",
+    "firstmove": 2,
+    "firstattack": 4,
+    "winorloss": 0
+},
+{
+    "name": "AI-9007",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 9,
+    "winorloss": 0
+},
+{
+    "name": "AI-9008",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9009",
+    "age": 22,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9010",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 5,
+    "winorloss": 0
+},
+{
+    "name": "AI-9011",
+    "age": 10,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9012",
+    "age": 15,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 9,
+    "winorloss": 1
+},
+{
+    "name": "AI-9013",
+    "age": 20,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9014",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9015",
+    "age": 21,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9016",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 3,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9017",
+    "age": 23,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 4,
+    "winorloss": 0
+},
+{
+    "name": "AI-9018",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 9,
+    "winorloss": 1
+},
+{
+    "name": "AI-9019",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9020",
+    "age": 22,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9021",
+    "age": 10,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9022",
+    "age": 16,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 6,
+    "winorloss": 0
+},
+{
+    "name": "AI-9023",
+    "age": 20,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9024",
+    "age": 8,
+    "sex": "female",
+    "dominanthand": "left",
+    "firstmove": 3,
+    "firstattack": 5,
+    "winorloss": 0
+},
+{
+    "name": "AI-9025",
+    "age": 31,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9026",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9027",
+    "age": 23,
+    "sex": "male",
+    "dominanthand": "rigiht",
+    "firstmove": 2,
+    "firstattack": 4,
+    "winorloss": 0
+},
+{
+    "name": "AI-9028",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 9,
+    "winorloss": 0
+},
+{
+    "name": "AI-9029",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9030",
+    "age": 22,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9031",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 5,
+    "winorloss": 0
+},
+{
+    "name": "AI-9032",
+    "age": 10,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9033",
+    "age": 15,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 9,
+    "winorloss": 1
+},
+{
+    "name": "AI-9034",
+    "age": 20,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9035",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9036",
+    "age": 21,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9037",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 3,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9038",
+    "age": 23,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 4,
+    "winorloss": 0
+},
+{
+    "name": "AI-9039",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 9,
+    "winorloss": 1
+},
+{
+    "name": "AI-9040",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9041",
+    "age": 10,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9042",
+    "age": 16,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 6,
+    "winorloss": 0
+},
+{
+    "name": "AI-9043",
+    "age": 20,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9044",
+    "age": 8,
+    "sex": "female",
+    "dominanthand": "left",
+    "firstmove": 3,
+    "firstattack": 5,
+    "winorloss": 0
+},
+{
+    "name": "AI-9045",
+    "age": 31,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9046",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 8,
+    "winorloss": 1
+},
+{
+    "name": "AI-9047",
+    "age": 23,
+    "sex": "male",
+    "dominanthand": "rigiht",
+    "firstmove": 2,
+    "firstattack": 4,
+    "winorloss": 0
+},
+{
+    "name": "AI-9048",
+    "age": 18,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 3,
+    "firstattack": 9,
+    "winorloss": 0
+},
+{
+    "name": "AI-9049",
+    "age": 17,
+    "sex": "male",
+    "dominanthand": "left",
+    "firstmove": 2,
+    "firstattack": 7,
+    "winorloss": 1
+},
+{
+    "name": "AI-9050",
+    "age": 22,
+    "sex": "female",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 8,
+    "winorloss": 0
+},
+{
+    "name": "AI-9051",
+    "age": 18,
+    "sex": "male",
+    "dominanthand": "right",
+    "firstmove": 2,
+    "firstattack": 5,
+    "winorloss": 0
+}
+]
