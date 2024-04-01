@@ -32,14 +32,14 @@ class TBFTModel:
         self.dt = None
         # define ML features and target
         # self.features = ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'alone']
-        self.features = ['age', 'sex', 'dominanthand', 'firstmove', 'firstattack', 'winorloss']
+        self.features = ['age', 'sex', 'dominanthand', 'firstmove', 'firstattack']
         self.target = 'winorloss'
         # load the wwchickendinner dataset
-        self.tbftML_data = pd.read_json('/WRONGFlask/model/tbftML.json')
+        self.tbftML_data = pd.read_json('/Users/rayyandarugar/vscode/WRONGFlask/model/tbftML.json')
         print(self.tbftML_data)
         # one-hot encoder used to encode 'embarked' column
         self.encoder = OneHotEncoder(handle_unknown='ignore')
-    # clean the wwchickendinner dataset, prepare it for training
+    # clean the tbftmodel dataset, prepare it for training
     def _clean(self):
         # Drop unnecessary columns
         # self.wwchickendinner_data.drop(['alive', 'who', 'adult_male', 'class', 'embark_town', 'deck'], axis=1, inplace=True)
@@ -100,7 +100,7 @@ class TBFTModel:
                 'embarked': The port at which the passenger embarked ('C', 'Q', or 'S')
                 'alone': Whether the passenger is alone (True or False)
         Returns:
-           dictionary : contains die and survive probabilities
+           dictionary : contains lose and win probabilities
         """
         print(passenger)
         # clean the passenger data
@@ -117,9 +117,9 @@ class TBFTModel:
         # passenger_df = pd.concat([passenger_df, onehot_df], axis=1)
         passenger_df.drop(['name'], axis=1, inplace=True)
         # predict the survival probability and extract the probabilities from numpy array
-        die, survive = np.squeeze(self.model.predict_proba(passenger_df))
+        lose, win = np.squeeze(self.model.predict_proba(passenger_df))
         # return the survival probabilities as a dictionary
-        return {'die': die, 'survive': survive}
+        return {'lose': lose, 'win': win}
     def feature_weights(self):
         """Get the feature weights
         The weights represent the relative importance of each feature in the prediction model.
@@ -158,8 +158,8 @@ def testTBFTModel():
     # print the survival probability
     print(" Step 3:", tbftModel.predict.__doc__)
     probability = tbftModel.predict(passenger)
-    print('\t death probability: {:.2%}'.format(probability.get('die')))
-    print('\t survival probability: {:.2%}'.format(probability.get('survive')))
+    print('\t lose probability: {:.2%}'.format(probability.get('lose')))
+    print('\t win probability: {:.2%}'.format(probability.get('win')))
     print()
     # print the feature weights in the prediction model
     print(" Step 4:", tbftModel.feature_weights.__doc__)
