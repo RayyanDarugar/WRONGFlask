@@ -71,6 +71,7 @@ custom_cli = AppGroup('custom', help='Custom commands')
 @custom_cli.command('generate_data')
 def generate_data():
     initUsers()
+    print("USers have been stinking created...")
     initPlayers()
     initCharClasses()
     initCurrentChars()
@@ -78,8 +79,9 @@ def generate_data():
 
 # Register the custom command group with the Flask application
 app.cli.add_command(custom_cli)
+initUsers()
         
 # this runs the application on the development server
 if __name__ == "__main__":
-    # change name for testing
+    # change name for testing (port 8086)
     app.run(debug=True, host="0.0.0.0", port="8086")
